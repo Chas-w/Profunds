@@ -28,7 +28,6 @@ public class BucketBehavior : MonoBehaviour
         if (mousePos.x < -8.5f) mousePos = new Vector3(-8.5f, mousePos.y, mousePos.z);
         this.transform.position = new Vector3(mousePos.x, -4.5f, 0);
 
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
