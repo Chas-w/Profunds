@@ -13,28 +13,39 @@ public class BoatBehavior : MonoBehaviour
     [SerializeField] float downSpeed;
 
     bool isTurningRight;
+    Camera cam;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         isTurningRight = true;
+        cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        
         if (isTurningRight) {
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationOne.transform.rotation, 0.05f);
-            if (this.transform.rotation == rotationOne.transform.rotation) isTurningRight = false; 
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationOne.transform.rotation, 0.01f);
+            if (this.transform.rotation == rotationOne.transform.rotation || this.transform.rotation.z > 0.2484) isTurningRight = false; 
         } else
         {
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationTwo.transform.rotation, 0.05f);
-            if (this.transform.rotation == rotationTwo.transform.rotation) isTurningRight = true;
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationTwo.transform.rotation, 0.01f);
+            if (this.transform.rotation == rotationTwo.transform.rotation || this.transform.rotation.z < -0.226) isTurningRight = true;
         }
+
+        Debug.Log(this.transform.rotation.z);
         
-        //this.transform.position = new Vector3(mouseTracker.transform.position.x, 0, 0);
+        this.transform.position = new Vector3(mousePos.x, this.transform.position.y, this.transform.position.z);
         this.transform.position += new Vector3(0, downSpeed * Time.deltaTime, 0);
-        
+
+        if(this.transform.position.x > 4.1f) this.transform.position = new Vector3(4.1f, this.transform.position.y, this.transform.position.z);
+        if (this.transform.position.x < -4.1f) this.transform.position = new Vector3(-4.1f, this.transform.position.y, this.transform.position.z);
+
     }
 
 

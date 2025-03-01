@@ -14,6 +14,6 @@ public class CameraFollowBoat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = new Vector3(boat.transform.position.x, boat.transform.position.y - 3, -10);
+        this.transform.position = new Vector3(this.transform.position.x, boat.transform.position.y - 3, -10);
     }
 }
