@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 37488397}
   - component: {fileID: 37488396}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Barrier (Include in Background)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 65314622}
   - component: {fileID: 65314621}
   m_Layer: 0
-  m_Name: Lightbulb
+  m_Name: 'Lightbulb (Sprite: Lightbulb, ON and OFF)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 590432285}
   - component: {fileID: 590432287}
   m_Layer: 0
-  m_Name: Twister
+  m_Name: 'Twister (Sprite: Lightbulb from ABOVE)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 1556842725}
   - component: {fileID: 1556842724}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: 'Christine''s Head (Sprite: Christine''s Head)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,7 +702,8 @@ Transform:
   m_LocalPosition: {x: 4.51, y: -1.32, z: 0}
   m_LocalScale: {x: 2.8187, y: 3.3985, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2032170949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666013477
@@ -831,11 +832,11 @@ Transform:
   m_GameObject: {fileID: 2032170947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.14661683, w: 0.9891934}
-  m_LocalPosition: {x: 5.14, y: -3.9, z: 0}
-  m_LocalScale: {x: 1.3955383, y: 2.8605175, z: 1}
+  m_LocalPosition: {x: 0.22350715, y: -0.7591584, z: 0}
+  m_LocalScale: {x: 0.4866771, y: 0.8539579, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1556842725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.862}
 --- !u!1 &2034817649
 GameObject:
@@ -984,6 +985,5 @@ SceneRoots:
   - {fileID: 479738395}
   - {fileID: 37488397}
   - {fileID: 1556842725}
-  - {fileID: 2032170949}
   - {fileID: 65314622}
   - {fileID: 1179984724}

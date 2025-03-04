@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 379195579}
   - component: {fileID: 379195578}
   m_Layer: 0
-  m_Name: Table
+  m_Name: 'Table (Sprite: Table / Background Including Table)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 1146330475}
   - component: {fileID: 1146330477}
   m_Layer: 0
-  m_Name: PAINT
+  m_Name: 'PAINT (Sprite: Painted Vase)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 1878266886}
   - component: {fileID: 1878266885}
   m_Layer: 0
-  m_Name: BASE
+  m_Name: 'BASE (Sprite: Unpainted Vase)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

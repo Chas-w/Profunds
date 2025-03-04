@@ -1724,7 +1724,7 @@ GameObject:
   - component: {fileID: 1354947472}
   - component: {fileID: 1354947471}
   m_Layer: 6
-  m_Name: Stick - Short (1)
+  m_Name: 'Stick - Short (1) (Sprite: ADD HOUSE OUTLINE TO BACKGROUND)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1897,7 +1897,7 @@ GameObject:
   - component: {fileID: 1411955944}
   - component: {fileID: 1411955943}
   m_Layer: 0
-  m_Name: Short - 1
+  m_Name: 'Short - 1 (Sprite: Short Stick)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2208,7 +2208,7 @@ GameObject:
   - component: {fileID: 2097295010}
   - component: {fileID: 2097295011}
   m_Layer: 6
-  m_Name: Stick - Long (1)
+  m_Name: 'Stick - Long (1) (Sprite: Long Stick)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

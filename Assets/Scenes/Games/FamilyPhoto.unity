@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 955513772}
   - component: {fileID: 955513774}
   m_Layer: 0
-  m_Name: Family
+  m_Name: 'Family (Sprite: Family, as many as we want)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 2069593002}
   - component: {fileID: 2069593001}
   m_Layer: 0
-  m_Name: Christine
+  m_Name: 'Christine (Sprite: Young Christine)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

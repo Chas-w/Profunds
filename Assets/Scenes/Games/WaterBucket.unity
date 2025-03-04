@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 133179104}
   - component: {fileID: 133179107}
   m_Layer: 0
-  m_Name: Bucket
+  m_Name: 'Bucket (Sprite: Bucket)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 655978811}
   - component: {fileID: 655978812}
   m_Layer: 0
-  m_Name: RainManager
+  m_Name: 'RainManager (Sprite: Raindrops)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,14 +481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mousePos: {x: 0, y: 0, z: 0}
-  canUseY: 0
-  canUseX: 1
-  maxX: 8.5
-  minX: -8.5
-  maxY: 0
-  minY: 0
-  staticX: 0
-  staticY: -4.5
 --- !u!4 &1626986630
 Transform:
   m_ObjectHideFlags: 0
