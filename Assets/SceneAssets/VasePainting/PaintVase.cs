@@ -7,12 +7,15 @@ public class PaintVase : MonoBehaviour
     [SerializeField] float hRadius;
     [SerializeField] float vRadius;
 
+    [SerializeField] float paintIntensity; 
+
     float alphaValue;
     Vector3 lastLocation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        paintIntensity *= 100; 
         alphaValue = 0f;
     }
 
@@ -23,7 +26,7 @@ public class PaintVase : MonoBehaviour
             && mouseTracker.transform.position.y > this.transform.position.y - vRadius && mouseTracker.transform.position.y < this.transform.position.y + vRadius) {
 
             if (lastLocation != mouseTracker.transform.position) {
-                alphaValue += Mathf.Abs(Vector3.Magnitude(lastLocation - mouseTracker.transform.position)) / 100;
+                alphaValue += Mathf.Abs(Vector3.Magnitude(lastLocation - mouseTracker.transform.position)) / paintIntensity;
                 if(alphaValue > 1) alphaValue = 1;
                 lastLocation = mouseTracker.transform.position;
             }

@@ -6,11 +6,44 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MenuScene.unity
+    guid: 8925d83f5ec029e4a81a748077c7931e
   - enabled: 1
-    path: Assets/Scenes/SceneTest.unity
-    guid: 00e73ecc255d7db45bbbab29f4e080e1
+    path: Assets/Scenes/Games/VasePainting.unity
+    guid: ea977d5601e58304aaa0ed79544f03a8
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/DancingTurnipLeg.unity
+    guid: f5454a05c97175347b91afa1e1ef1fb5
+  - enabled: 1
+    path: Assets/Scenes/Games/Piano.unity
+    guid: 36243477b8fb1764a855d6f1111ef805
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/TalkingHeadToLightbulb.unity
+    guid: 9b3b2eefe1971744ea986bc092acb94c
+  - enabled: 1
+    path: Assets/Scenes/Games/Lightbulb.unity
+    guid: 209085df8236ae14295dc3bfbaeefef9
+  - enabled: 1
+    path: Assets/Scenes/Games/StickHouse.unity
+    guid: 2937f4ca3bd4bdf41a9a1fce8e4c6b6e
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Rooftop.unity
+    guid: 11a67b03e71b2b3458f33715f85e7f34
+  - enabled: 1
+    path: Assets/Scenes/Games/WaterBucket.unity
+    guid: 4c3e3e70ac881fa4ebc905710a161981
+  - enabled: 1
+    path: Assets/Scenes/Games/PaperBoat.unity
+    guid: 9a0d6509b8338b7489b5e9926ad67b0d
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/ConfidenceImagination.unity
+    guid: 9d69d518332cf1d4ab2f4d5dd8a06501
+  - enabled: 1
+    path: Assets/Scenes/Games/FamilyPhoto.unity
+    guid: 00f6e5fdd3267cb45b675775838d4c5a
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/ChristineLaughs.unity
+    guid: 552af7a49ac0c39459752ce1771a8eba
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
