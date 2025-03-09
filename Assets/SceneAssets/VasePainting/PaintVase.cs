@@ -31,8 +31,6 @@ public class PaintVase : MonoBehaviour
                 lastLocation = mouseTracker.transform.position;
             }
         }
-
-        this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, alphaValue);
-        //IN THE ACTUAL GAME THE COLOR WILL HAVE TO BE CHANGED TO new Color(1, 1, 1, alphaValue);
+        this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alphaValue);
     }
 }
