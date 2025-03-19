@@ -5,6 +5,7 @@ public class LightbulbManager : MonoBehaviour
 
     [SerializeField] GameObject twisting;
     [SerializeField] GameObject lightbulb;
+    [SerializeField] Sprite lightbulbOn;
 
     Vector3 lightbulbStartPosition;
 
@@ -18,8 +19,7 @@ public class LightbulbManager : MonoBehaviour
     void Update()
     {
 
-        if (lightbulb.transform.position.y > 0.5f) lightbulb.transform.position = new Vector3(lightbulb.transform.position.x, lightbulbStartPosition.x - (twisting.GetComponent<TwistingBehavior>().totalRotation / 25), 0);
-        else lightbulb.GetComponent<SpriteRenderer>().color = Color.yellow;
-
+        if (lightbulb.transform.position.y > 1.86f) lightbulb.transform.position = new Vector3(lightbulb.transform.position.x, lightbulbStartPosition.y - (twisting.GetComponent<TwistingBehavior>().totalRotation / 25), 0);
+        else lightbulb.GetComponent<SpriteRenderer>().sprite = lightbulbOn;
     }
 }

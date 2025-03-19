@@ -45,7 +45,7 @@ public class StickBehavior : MonoBehaviour
             {
                 
                 this.transform.position = new Vector3(finalPosition.transform.position.x, finalPosition.transform.position.y, 0);
-                this.transform.rotation = finalPosition.transform.rotation;
+                //this.transform.rotation = finalPosition.transform.rotation;
 
                 //this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                 isInFinalPosition = true;
