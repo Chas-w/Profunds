@@ -359,7 +359,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6266176060360064, guid: cc98254d6c792024b8bee8cc4681f35d, type: 3}
+  m_Sprite: {fileID: 3381343527503427988, guid: 1cf1ec20290bcc4459fbbde20ad1dbf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -379,8 +379,8 @@ Transform:
   m_GameObject: {fileID: 955513771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -0.82, z: 10}
-  m_LocalScale: {x: 11.1765, y: 7.3576174, z: 1}
+  m_LocalPosition: {x: 0.01, y: -0.08, z: 10}
+  m_LocalScale: {x: 0.952, y: 0.952, z: 0.952}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -398,8 +398,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   familySprites:
-  - {fileID: 6266176060360064, guid: cc98254d6c792024b8bee8cc4681f35d, type: 3}
-  - {fileID: -4597436970944649126, guid: 3594b4ee9a7821540900d30ebea4dd5a, type: 3}
+  - {fileID: 3381343527503427988, guid: 1cf1ec20290bcc4459fbbde20ad1dbf3, type: 3}
+  - {fileID: 2360822713005432828, guid: b1e1df3d503c48242b53c6910f2c6fb7, type: 3}
+  - {fileID: 5168282850451821264, guid: 9855f6e0a1620504dbf98398bc6d7543, type: 3}
+  - {fileID: 3379120638696144438, guid: 799d3f3cf79b73e4baca7f516ef33a90, type: 3}
+  - {fileID: 2839617943900881216, guid: edb7a9079b24fbc468da98d9ad1cef20, type: 3}
 --- !u!1 &2069593000
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +464,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6266176060360064, guid: cc98254d6c792024b8bee8cc4681f35d, type: 3}
+  m_Sprite: {fileID: -8958288865593304119, guid: be5154967623da74595e16a90ff7e77f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -481,9 +484,9 @@ Transform:
   m_GameObject: {fileID: 2069593000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -3.07, z: 0}
-  m_LocalScale: {x: 2.1698, y: 2.1698, z: 2.1698}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.11, y: -1.85, z: 0}
+  m_LocalScale: {x: 0.8752, y: 0.8752, z: 0.8752}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -498,6 +501,7 @@ GameObject:
   - component: {fileID: 2114736993}
   - component: {fileID: 2114736992}
   - component: {fileID: 2114736991}
+  - component: {fileID: 2114736994}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -522,8 +526,8 @@ Camera:
   m_GameObject: {fileID: 2114736990}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.89411765, g: 0.84313726, b: 0.70980394, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -579,6 +583,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114736994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114736990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
