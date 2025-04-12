@@ -30,11 +30,11 @@ public class BoatBehavior : MonoBehaviour
 
         
         if (isTurningRight) {
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationOne.transform.rotation, 0.01f);
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationOne.transform.rotation, 0.005f);
             if (this.transform.rotation == rotationOne.transform.rotation || this.transform.rotation.z > 0.2484) isTurningRight = false; 
         } else
         {
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationTwo.transform.rotation, 0.01f);
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, rotationTwo.transform.rotation, 0.005f);
             if (this.transform.rotation == rotationTwo.transform.rotation || this.transform.rotation.z < -0.226) isTurningRight = true;
         }
 
