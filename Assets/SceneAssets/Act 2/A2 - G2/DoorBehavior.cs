@@ -24,6 +24,8 @@ public class DoorBehavior : MonoBehaviour
             player = collision.gameObject;
             collision.gameObject.GetComponent<ChristineMovement>().isStopped = true;
             hasStopped = true;
+
+
         }
         
     }

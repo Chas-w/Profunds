@@ -19,7 +19,7 @@ public class LightbulbManager : MonoBehaviour
     void Update()
     {
 
-        if (lightbulb.transform.position.y > 1.86f) lightbulb.transform.position = new Vector3(lightbulb.transform.position.x, lightbulbStartPosition.y - (twisting.GetComponent<TwistingBehavior>().totalRotation / 25), 0);
+        if (lightbulb.transform.position.y > 1.86f) lightbulb.transform.position = new Vector3(lightbulb.transform.position.x, lightbulbStartPosition.y - (twisting.GetComponent<TwistingBehavior>().totalRotation / 25), 10);
         else lightbulb.GetComponent<SpriteRenderer>().sprite = lightbulbOn;
     }
 }
