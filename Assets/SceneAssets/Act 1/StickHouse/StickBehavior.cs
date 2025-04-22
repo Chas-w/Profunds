@@ -10,6 +10,7 @@ public class StickBehavior : MonoBehaviour
     float yDisplacement;
 
     [SerializeField] GameObject finalPosition;
+    [SerializeField] GameObject manager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,14 +43,13 @@ public class StickBehavior : MonoBehaviour
             if (this.transform.position.y > 5) this.transform.position = new Vector3(this.transform.position.x, 3.3f, 0);
 
 
-            if (this.transform.position.x > finalPosition.transform.position.x - 0.1f && this.transform.position.x < finalPosition.transform.position.x + 0.1f
-                && this.transform.position.y > finalPosition.transform.position.y - 0.1f && this.transform.position.y < finalPosition.transform.position.y + 0.1f)
+            if (this.transform.position.x > finalPosition.transform.position.x - 0.2f && this.transform.position.x < finalPosition.transform.position.x + 0.2f
+                && this.transform.position.y > finalPosition.transform.position.y - 0.2f && this.transform.position.y < finalPosition.transform.position.y + 0.2f)
             {
-                
                 this.transform.position = new Vector3(finalPosition.transform.position.x, finalPosition.transform.position.y, 0);
-                //this.transform.rotation = finalPosition.transform.rotation;
 
-                //this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                manager.GetComponent<StickManager>().currentStick = null;
+
                 isInFinalPosition = true;
                 isHeld = false;
             }
@@ -62,13 +62,20 @@ public class StickBehavior : MonoBehaviour
     private void OnMouseOver()
     {
         Debug.Log("MouseOver");
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && manager.GetComponent<StickManager>().currentStick == null || manager.GetComponent<StickManager>().currentStick == this.gameObject) {
             Debug.Log("IsClicked");
             isHeld = true;
+
+            manager.GetComponent<StickManager>().currentStick = this.gameObject;
 
             Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             xDisplacement = mousePos.x - this.transform.position.x;
             yDisplacement = mousePos.y - this.transform.position.y;
         }
+    }
+
+    private void OnMouseExit()
+    {
+        if (manager.GetComponent<StickManager>().currentStick == this.gameObject) manager.GetComponent<StickManager>().currentStick = null;
     }
 }

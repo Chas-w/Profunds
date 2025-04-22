@@ -43,8 +43,8 @@ public class BoatBehavior : MonoBehaviour
         this.transform.position = new Vector3(mousePos.x, this.transform.position.y, this.transform.position.z);
         this.transform.position += new Vector3(0, downSpeed * Time.deltaTime, 0);
 
-        if(this.transform.position.x > 4.1f) this.transform.position = new Vector3(4.1f, this.transform.position.y, this.transform.position.z);
-        if (this.transform.position.x < -4.1f) this.transform.position = new Vector3(-4.1f, this.transform.position.y, this.transform.position.z);
+        if(this.transform.position.x > 8f) this.transform.position = new Vector3(8f, this.transform.position.y, this.transform.position.z);
+        if (this.transform.position.x < -8f) this.transform.position = new Vector3(-8f, this.transform.position.y, this.transform.position.z);
 
     }
 
