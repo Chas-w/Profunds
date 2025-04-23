@@ -311,7 +311,7 @@ MonoBehaviour:
   mouseTracker: {fileID: 1944830993}
   hRadius: 2
   vRadius: 3
-  paintIntensity: 5
+  paintIntensity: 3
 --- !u!1 &544972998
 GameObject:
   m_ObjectHideFlags: 0
