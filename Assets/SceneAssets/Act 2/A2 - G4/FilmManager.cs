@@ -9,9 +9,11 @@ public class FilmManager : MonoBehaviour
     [SerializeField] GameObject larryTrayFinalPosition;
 
     public GameObject currentFilmPiece;
+    public bool trayIsFinal;
 
     bool isCheckingFilm;
     bool isMovingTray;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,7 +52,7 @@ public class FilmManager : MonoBehaviour
 
         if (isMovingTray) {
             larryTray.transform.position = Vector3.Lerp(larryTray.transform.position, larryTrayFinalPosition.transform.position, 0.05f);
-            if (larryTray.transform.position.y > larryTrayFinalPosition.transform.position.y - 0.1f) {
+            if (larryTray.transform.position.x > larryTrayFinalPosition.transform.position.x - 0.1f) {
                 for (int i = 0; i < larryFilm.Length; i++)
                 {
                     larryFilm[i].GetComponent<FilmPieceBehavior>().isLarryFilm = false;
@@ -58,6 +60,7 @@ public class FilmManager : MonoBehaviour
                 }
 
                 isMovingTray = false;
+                trayIsFinal = true;
             } 
         }
 

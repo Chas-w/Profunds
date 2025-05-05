@@ -11,13 +11,18 @@ public class FilmPieceBehavior : MonoBehaviour
     public bool isLarryFilm;
     public GameObject filmManager;
 
+    Vector3 larryFilmDisplacement;
+
     [SerializeField] GameObject finalPosition;
+    [SerializeField] GameObject larryTray;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cam = Camera.main;
         isInFinalPosition = false;
+
+        if (isLarryFilm) larryFilmDisplacement = larryTray.transform.position - this.transform.position;
     }
 
     // Update is called once per frame
@@ -35,7 +40,8 @@ public class FilmPieceBehavior : MonoBehaviour
 
             if (isHeld)
             {
-                this.transform.position = new Vector3(mousePos.x - xDisplacement, mousePos.y - yDisplacement, 0);
+                //this.transform.position = new Vector3(mousePos.x - xDisplacement, mousePos.y - yDisplacement, 0);
+                this.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
                 Debug.Log("isHeld");
             }
 
@@ -47,15 +53,22 @@ public class FilmPieceBehavior : MonoBehaviour
                 if (this.transform.position.y < -5) this.transform.position = new Vector3(this.transform.position.x, -3.3f, 0);
                 if (this.transform.position.y > 5) this.transform.position = new Vector3(this.transform.position.x, 3.3f, 0);
             }
-            
+
+            if (isLarryFilm && !filmManager.GetComponent<FilmManager>().trayIsFinal)
+
+            {
+                this.transform.position = larryTray.transform.position - larryFilmDisplacement;
+            }
 
 
-            if (this.transform.position.x > finalPosition.transform.position.x - 0.1f && this.transform.position.x < finalPosition.transform.position.x + 0.1f
-                && this.transform.position.y > finalPosition.transform.position.y - 0.1f && this.transform.position.y < finalPosition.transform.position.y + 0.1f)
+
+            if (this.transform.position.x > finalPosition.transform.position.x - 0.2f && this.transform.position.x < finalPosition.transform.position.x + 0.2f
+                && this.transform.position.y > finalPosition.transform.position.y - 0.2f && this.transform.position.y < finalPosition.transform.position.y + 0.2f)
             {
 
                 this.transform.position = new Vector3(finalPosition.transform.position.x, finalPosition.transform.position.y, 0);
-
+                transform.localScale = Vector3.one * 0.93f;
+                
                 isInFinalPosition = true;
                 isHeld = false;
                 filmManager.GetComponent<FilmManager>().currentFilmPiece = null;
