@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Unlit Cigarette_0: -2295559264826177932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

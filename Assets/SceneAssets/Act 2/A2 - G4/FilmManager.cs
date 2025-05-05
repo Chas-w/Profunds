@@ -8,6 +8,8 @@ public class FilmManager : MonoBehaviour
     [SerializeField] GameObject larryTray;
     [SerializeField] GameObject larryTrayFinalPosition;
 
+    public GameObject currentFilmPiece;
+
     bool isCheckingFilm;
     bool isMovingTray;
 
@@ -15,6 +17,16 @@ public class FilmManager : MonoBehaviour
     void Start()
     {
         isCheckingFilm = true;
+
+        for (int i = 0; i < christineFilmPieces.Length; i++)
+        {
+            christineFilmPieces[i].GetComponent<FilmPieceBehavior>().filmManager = this.gameObject;
+        }
+        for (int i = 0; i < larryFilm.Length; i++)
+        {
+            larryFilm[i].GetComponent<FilmPieceBehavior>().filmManager = this.gameObject;
+
+        }
     }
 
     // Update is called once per frame

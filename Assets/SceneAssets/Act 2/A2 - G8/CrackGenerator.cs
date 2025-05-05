@@ -3,6 +3,8 @@ using UnityEngine;
 public class CrackGenerator : MonoBehaviour
 {
     [SerializeField] Sprite[] crackSprites;
+    [SerializeField] GameObject background;
+    [SerializeField] GameObject eye;
     int currentCrack;
     bool canContinue;
 
@@ -13,6 +15,7 @@ public class CrackGenerator : MonoBehaviour
     {
         this.GetComponent<SpriteRenderer>().sprite = crackSprites[0];
         canContinue = true;
+        eye.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,6 +27,8 @@ public class CrackGenerator : MonoBehaviour
             if (currentCrack == crackSprites.Length) {
                 canContinue = false;
                 this.GetComponent<SpriteRenderer>().sprite = null;
+                background.SetActive(false);
+                eye.SetActive(true);
             }  else this.GetComponent<SpriteRenderer>().sprite = crackSprites[currentCrack];
 
         }

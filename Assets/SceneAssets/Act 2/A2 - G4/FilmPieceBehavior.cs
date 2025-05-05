@@ -9,6 +9,7 @@ public class FilmPieceBehavior : MonoBehaviour
 
     public bool isInFinalPosition;
     public bool isLarryFilm;
+    public GameObject filmManager;
 
     [SerializeField] GameObject finalPosition;
 
@@ -26,8 +27,9 @@ public class FilmPieceBehavior : MonoBehaviour
         {
             Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && isHeld)
             {
+                filmManager.GetComponent<FilmManager>().currentFilmPiece = null;
                 isHeld = false;
             }
 
@@ -56,6 +58,7 @@ public class FilmPieceBehavior : MonoBehaviour
 
                 isInFinalPosition = true;
                 isHeld = false;
+                filmManager.GetComponent<FilmManager>().currentFilmPiece = null;
             }
         }
 
@@ -65,13 +68,15 @@ public class FilmPieceBehavior : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !isInFinalPosition && (filmManager.GetComponent<FilmManager>().currentFilmPiece == null || filmManager.GetComponent<FilmManager>().currentFilmPiece == this.gameObject))
         {
             isHeld = true;
 
             Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             xDisplacement = mousePos.x - this.transform.position.x;
             yDisplacement = mousePos.y - this.transform.position.y;
+
+            filmManager.GetComponent<FilmManager>().currentFilmPiece = this.gameObject;
         }
     }
 }
