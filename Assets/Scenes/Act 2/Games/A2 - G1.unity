@@ -147,7 +147,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451795175}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cbbf3e81497ac8b449f720cd6cb4ec04, type: 2}
   m_CullingMode: 0
@@ -225,8 +225,8 @@ Transform:
   m_GameObject: {fileID: 451795175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.57, y: 1.04, z: 4.1388}
-  m_LocalScale: {x: 0.6555, y: 0.6555, z: 0.6555}
+  m_LocalPosition: {x: 6.54, y: 1.6, z: 4.8591}
+  m_LocalScale: {x: 0.9435828, y: 0.9435828, z: 0.9435828}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -371,8 +371,8 @@ Transform:
   m_GameObject: {fileID: 539604285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.005500078, y: -2.3753002, z: 0.8612}
-  m_LocalScale: {x: 0.6555, y: 0.6555, z: 0.6555}
+  m_LocalPosition: {x: -0.046499833, y: -3.3164, z: 0.1409}
+  m_LocalScale: {x: 0.9435828, y: 0.9435828, z: 0.9435828}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -405,7 +405,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558467811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 93a9a6cc5449f7a45b83b458dd35247e, type: 2}
   m_CullingMode: 0
@@ -483,8 +483,8 @@ Transform:
   m_GameObject: {fileID: 558467811}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6728, y: 1.0531, z: 4.1388}
-  m_LocalScale: {x: 0.6555, y: 0.6555, z: 0.6555}
+  m_LocalPosition: {x: -6.7651, y: 1.6189, z: 4.8591}
+  m_LocalScale: {x: 0.9435828, y: 0.9435828, z: 0.9435828}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -631,8 +631,8 @@ Transform:
   m_GameObject: {fileID: 1525428064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08769989, y: 1.0307, z: 1.5167}
-  m_LocalScale: {x: 0.6555, y: 0.6555, z: 0.6555}
+  m_LocalPosition: {x: -0.16479984, y: 1.5866, z: 1.0846}
+  m_LocalScale: {x: 0.9435828, y: 0.9435828, z: 0.9435828}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 1600262499}
   - component: {fileID: 1600262498}
   - component: {fileID: 1600262497}
+  - component: {fileID: 1600262500}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -731,8 +732,8 @@ Camera:
   m_GameObject: {fileID: 1600262496}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.89411765, g: 0.84313726, b: 0.70980394, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -788,6 +789,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600262500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600262496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

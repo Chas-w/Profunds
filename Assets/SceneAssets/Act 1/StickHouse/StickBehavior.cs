@@ -28,6 +28,7 @@ public class StickBehavior : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 isHeld = false;
+                manager.GetComponent<StickManager>().currentStick = null;
             }
 
             if (isHeld) {
