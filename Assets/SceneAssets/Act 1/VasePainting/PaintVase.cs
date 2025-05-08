@@ -17,6 +17,8 @@ public class PaintVase : MonoBehaviour
     {
         paintIntensity *= 100; 
         alphaValue = 0f;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame

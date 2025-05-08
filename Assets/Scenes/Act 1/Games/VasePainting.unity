@@ -290,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 458011087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0, z: 0}
+  m_LocalPosition: {x: 0.09, y: 0, z: 2.16}
   m_LocalScale: {x: 0.7874, y: 0.7874, z: 0.7874}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -311,7 +311,7 @@ MonoBehaviour:
   mouseTracker: {fileID: 1944830993}
   hRadius: 2
   vRadius: 3
-  paintIntensity: 3
+  paintIntensity: 4
 --- !u!1 &544972998
 GameObject:
   m_ObjectHideFlags: 0
