@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Act 1/Games/Lighter.unity
     guid: a208fde2906b0c94c85545c0dd063f77
   - enabled: 1
+    path: Assets/Scenes/Act 1/CutScenes/WhenIwasVeryYoung.unity
+    guid: 9b3b2eefe1971744ea986bc092acb94c
+  - enabled: 1
     path: Assets/Scenes/Act 1/Games/VasePainting.unity
     guid: ea977d5601e58304aaa0ed79544f03a8
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act 1/Games/Piano.unity
     guid: 36243477b8fb1764a855d6f1111ef805
-  - enabled: 1
-    path: Assets/Scenes/Act 1/CutScenes/TalkingHeadToLightbulb.unity
-    guid: 9b3b2eefe1971744ea986bc092acb94c
   - enabled: 1
     path: Assets/Scenes/Act 1/Games/Lightbulb.unity
     guid: 209085df8236ae14295dc3bfbaeefef9

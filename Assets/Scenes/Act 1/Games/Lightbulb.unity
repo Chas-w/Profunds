@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeAwayTimer: 0
-  bufferTime: 3
+  bufferTime: 0
   gameScene: 1
   miniGameDone: 0
   interviewAudio: {fileID: 1403638342}
@@ -695,8 +695,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821223110ab71474b810c73c383dff85, type: 3}
-  m_Resource: {fileID: 8300000, guid: 821223110ab71474b810c73c383dff85, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7fa655cf3d17a4f418d5fd7e25baafcd, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7fa655cf3d17a4f418d5fd7e25baafcd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
