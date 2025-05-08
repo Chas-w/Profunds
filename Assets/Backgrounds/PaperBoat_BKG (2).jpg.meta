@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PaperBoat_BKG (2)_0: -7698756998638681190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

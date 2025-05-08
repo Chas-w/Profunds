@@ -10,6 +10,8 @@ public class FilmBreakBehavior : MonoBehaviour
     float yDisplacement;
 
     [SerializeField] GameObject finalPosition;
+    [SerializeField] bool useX;
+    [SerializeField] bool useY;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,15 +32,18 @@ public class FilmBreakBehavior : MonoBehaviour
             if (isHeld)
             {
                 //this.transform.position = Vector3.Lerp(this.transform.position, new Vector3(mousePos.x, mousePos.y, 0), 0.01f);
-                this.transform.position = new Vector3(mousePos.x - xDisplacement, mousePos.y - yDisplacement, 0);
+                if(useY) this.transform.position = new Vector3(this.transform.position.x, mousePos.y - yDisplacement, 0);
+                if (useX) this.transform.position = new Vector3(mousePos.x - xDisplacement, this.transform.position.y, 0);
                 Debug.Log("isHeld");
             }
+            /*
 
             if (this.transform.position.x > 9) this.transform.position = new Vector3(6.8f, this.transform.position.y, 0);
             if (this.transform.position.x < -9) this.transform.position = new Vector3(-6.8f, this.transform.position.y, 0);
 
             if (this.transform.position.y < -5) this.transform.position = new Vector3(this.transform.position.x, -3.3f, 0);
             if (this.transform.position.y > 5) this.transform.position = new Vector3(this.transform.position.x, 3.3f, 0);
+            */
 
 
             

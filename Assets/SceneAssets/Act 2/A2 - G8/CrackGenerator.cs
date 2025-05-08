@@ -5,6 +5,7 @@ public class CrackGenerator : MonoBehaviour
     [SerializeField] Sprite[] crackSprites;
     [SerializeField] GameObject background;
     [SerializeField] GameObject eye;
+    [SerializeField] GameObject eye2;
     int currentCrack;
     bool canContinue;
 
@@ -16,6 +17,7 @@ public class CrackGenerator : MonoBehaviour
         this.GetComponent<SpriteRenderer>().sprite = crackSprites[0];
         canContinue = true;
         eye.SetActive(false);
+        eye2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,9 +28,10 @@ public class CrackGenerator : MonoBehaviour
             currentCrack++;
             if (currentCrack == crackSprites.Length) {
                 canContinue = false;
-                this.GetComponent<SpriteRenderer>().sprite = null;
-                background.SetActive(false);
+                //this.GetComponent<SpriteRenderer>().sprite = null;
+                //background.SetActive(false);
                 eye.SetActive(true);
+                eye2.SetActive(true);
             }  else this.GetComponent<SpriteRenderer>().sprite = crackSprites[currentCrack];
 
         }

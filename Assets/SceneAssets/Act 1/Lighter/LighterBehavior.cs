@@ -1,10 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LighterBehavior : MonoBehaviour
 {
     Animator anim;
     [SerializeField] Animator flameAnim;
+    [SerializeField] GameObject cigarette;
+    [SerializeField] Vector3 endPosition;
+
+    bool isLit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,11 +23,19 @@ public class LighterBehavior : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             anim.SetTrigger("Lighting");
             StartCoroutine(StartFlame());
+            isLit = true;
         }
         if (Input.GetMouseButtonUp(0)) {
             anim.SetTrigger("LetGo");
             flameAnim.SetTrigger("LetGo");
-        } 
+            isLit = false;
+        }
+
+        if (isLit && this.transform.position.x < endPosition.x + 0.1f && this.transform.position.x > endPosition.x - 0.1f
+            && this.transform.position.y < endPosition.y + 0.1f && this.transform.position.y > endPosition.y - 0.1f) {
+            LightCigarette();
+        }
+
     }
 
     IEnumerator StartFlame()
@@ -30,5 +43,16 @@ public class LighterBehavior : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
 
         flameAnim.SetTrigger("Lighting");
+    }
+
+    void LightCigarette()
+    {
+        cigarette.GetComponent<Animator>().SetTrigger("Light");
+        Invoke("NextScene", 1);
+    }
+
+    void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
