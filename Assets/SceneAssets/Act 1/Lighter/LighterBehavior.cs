@@ -7,6 +7,8 @@ public class LighterBehavior : MonoBehaviour
     Animator anim;
     [SerializeField] Animator flameAnim;
     [SerializeField] GameObject cigarette;
+    [SerializeField] AudioClip lighterNoise;
+    [SerializeField] AudioSource lighterSoundSource; 
     [SerializeField] Vector3 endPosition;
 
     bool isLit;
@@ -22,6 +24,7 @@ public class LighterBehavior : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) {
             anim.SetTrigger("Lighting");
+            lighterSoundSource.PlayOneShot(lighterNoise);
             StartCoroutine(StartFlame());
             isLit = true;
         }
@@ -41,6 +44,7 @@ public class LighterBehavior : MonoBehaviour
     IEnumerator StartFlame()
     {
         yield return new WaitForSeconds(0.3f);
+        //lighterSoundSource.PlayOneShot(lighterNoise);
 
         flameAnim.SetTrigger("Lighting");
     }
@@ -48,7 +52,7 @@ public class LighterBehavior : MonoBehaviour
     void LightCigarette()
     {
         cigarette.GetComponent<Animator>().SetTrigger("Light");
-        Invoke("NextScene", 1);
+        //Invoke("NextScene", 3);
     }
 
     void NextScene()
